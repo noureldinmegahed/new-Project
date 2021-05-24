@@ -1,0 +1,50 @@
+<head>
+    <!-- <link rel="shortcut icon" href="assets/images/brainlogoweb.png"/> -->
+    <link rel="stylesheet" href="assets/style/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+<div id="container">    
+    <div id="containerOfShape">
+        <div id="cube">
+            <div id="dragTool" draggable="true" ondrag="showCoords(event)" ondragend="dragendfun(event)">
+                <span>
+                <img id="circle" src="assets/images/circle.png">
+            </span>
+            </div>
+        </div>
+            
+    </div>
+</div>
+
+<p><strong>Tip:</strong> Try to click different places in the heading.</p>
+
+<p id="demo"></p>
+<div>
+    <p></p>
+</div>
+<script>
+    function showCoords(event) {
+    var x = event.clientX;
+    var y = event.clientY;
+    document.getElementById("cube").style.width = x;
+    document.getElementById("cube").style.height = y;
+    
+    var coords = "X coords: " + x + ", Y coords: " + y;
+    document.getElementById("demo").innerHTML = coords;
+  }
+  function dragendfun(event){
+      var x = event.clientX;
+      var y = event.clientY;
+      document.getElementById("cube").style.width = x;
+      var any =document.getElementById("cube").style.width = x;
+      document.getElementById("cube").style.height = y;
+      console.log(any)
+  }
+  var cube = document.getElementById(cube).clientWidth;
+  var box = document.querySelector('#cube');
+//   console.log(cube.width)
+</script>
+<script src="assets/script/script.js"></script>
+</body>
