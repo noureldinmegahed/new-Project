@@ -1,16 +1,21 @@
+@font-face{
+  font-family: 'Cairo';
+  src: url("../fonts/Cairo-Regular.ttf")
+}
 * {
   margin: 0;
   padding: 0;
   border: 0;
+  font-family: 'Cairo';
 }
-/* *,
+ /* *,
 *::after,
 *::before {
   -webkit-user-select: none;
   -webkit-user-drag: none;
   -webkit-app-region: no-drag;
   cursor: default;
-} */
+}  */
 body{
   background-color: #f4fcfe;
 }
@@ -36,6 +41,7 @@ body{
   position: absolute;
   bottom: -15px;
   right: -15px;
+  cursor: nw-resize;
 }
 #dragTool {
   text-align: right;
@@ -46,4 +52,32 @@ body{
   #containerOfShape {
     width: 50%;
   }
+}
+#data{
+  background-color: white;
+  border: black solid 1px;
+  width: 350px;
+  float: right;
+  position: relative;
+  top: -100px;
+  padding-left: 20px;
+  margin-right: 50px;
+}
+#address{
+  padding: 3px;
+}
+#text{
+  width: 20%;
+}
+.txtData{
+  font-size: 18px;
+  margin-left: 40px;
+  margin: 8px 0;
+}
+#widthData,#heightData{
+  font-size: 20px;
+  border: black solid 1px;
+  border-radius: 15px;
+  padding: 0 5px;
+  background-color: #e0e0e0;
 }
