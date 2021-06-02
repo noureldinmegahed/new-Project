@@ -3,25 +3,65 @@
     <link rel="stylesheet" href="assets/style/style.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <script src="assets/script/jquery.js"></script>
 </head>
 <body>
-<div id="container">    
+<div id="container">
     <div id="containerOfShape">
         <div id="cube">
             <div id="dragTool" draggable="true" ondrag="showCoords(event)" ondragend="dragendfun(event)">
-            <span ondragstart="dragStart(event)" draggable="true" id="dragtarget">
+            <span id="dragtarget">
                 <img id="circle" src="assets/images/circle.png">
             </span>
             </div>
+            <div>
+                <p id="changedArea"></p>
+            </div>
         </div>
     </div>
-</div>
-<div id="data">
-    <div id="address">
+    <button onclick="hideBack()" style="background-color: #f4fcfe; position: absolute; "><svg style="background-color: #f4fcfe; position: absolute; left: 120px; top: 50px;" id="svg1">
+        <path d="M 7.50000000000000000000 0.00000000000000000000 L 7.50000000000000000000 30.00000000000000000000 M 15.00000000000000000000 0.00000000000000000000 L 15.00000000000000000000 30.00000000000000000000 M 22.50000000000000000000 0.00000000000000000000 L 22.50000000000000000000 30.00000000000000000000 M 0.00000000000000000000 7.50000000000000000000 L 30.00000000000000000000 7.50000000000000000000 M 0.00000000000000000000 15.00000000000000000000 L 30.00000000000000000000 15.00000000000000000000 M 0.00000000000000000000 22.50000000000000000000 L 30.00000000000000000000 22.50000000000000000000 " style="fill: none; stroke: rgb(85,85,85);stroke-miterlimit: 10;"></path>
+      </svg></button>
+      <button onclick="hideColor()" style="background-color: #f4fcfe; position: absolute;"><svg id="svg2"><svg><g transform="translate(0.00000000000000000000,75.75000000000000000000)"><g transform="translate(29.80326704545454674644,-25.75000000000000000000)"><g transform="translate(0.25000000000000000000,0.25000000000000000000)"><rect x="0" y="0" width="30" height="30" rx="0" ry="0" style="fill: rgb(252,250,202); stroke: rgb(0,0,0);stroke-width: 0.5;stroke-miterlimit: 10;"></rect></g><g transform="translate(34.50000000000000000000,0.25000000000000000000)"><rect x="0" y="0" width="3" height="30" rx="0" ry="0" style="fill: rgb(252,250,202); stroke: rgb(0,0,0);stroke-width: 0.5;stroke-miterlimit: 10;"></rect></g><g transform="translate(41.50000000000000000000,0.00000000000000000000)"><g transform="translate(0.25000000000000000000,0.25000000000000000000)"><rect x="0" y="0" width="3" height="3" rx="0" ry="0" style="fill: rgb(252,250,202); stroke: rgb(0,0,0);stroke-width: 0.5;stroke-miterlimit: 10;"></rect></g><g transform="translate(0.25000000000000000000,3.75000000000000000000)"><rect x="0" y="0" width="3" height="3" rx="0" ry="0" style="fill: rgb(252,250,202); stroke: rgb(0,0,0);stroke-width: 0.5;stroke-miterlimit: 10;"></rect></g><g transform="translate(0.25000000000000000000,7.25000000000000000000)"><rect x="0" y="0" width="3" height="3" rx="0" ry="0" style="fill: rgb(252,250,202); stroke: rgb(0,0,0);stroke-width: 0.5;stroke-miterlimit: 10;"></rect></g></g></g><g><rect x="0" y="-25.75" width="74.80326704545455" height="30.5" rx="0" ry="0" style="fill: none; stroke: none;stroke-miterlimit: 10;"></rect></g></g></svg></svg>
+    </button>
+
+<div id="containerOfData">
+<div class="data">
+    <div class="address">
         <p>Dimensions</p>
     </div>
     <p class="txtData">Width = <span id="widthData"></span></p>
     <p class="txtData">Height = <span id="heightData"></span></p>
+</div>
+
+<div class="data">
+    <div class="address">
+        <p>Area</p>
+    </div>
+    <p class="txtData">Area = <span id="areaData"></span></p>
+</div>
+
+<div class="data2">
+    <div class="address2">
+        <p>Parital Products</p>
+    </div>
+    <button id="hideB" onclick="hide(this)"><img class="imgB" src="assets/images/eye.png"></button>
+    <button id="axB" onclick="axb()"><img class="imgB" src="assets/images/axb.png"></button>
+    <button id="A" onclick="a()"><img class="imgB" src="assets/images/a.png"></button>
+    <hr>
+    <div class="address2">
+        <p>Area Model Calculation</p>
+    </div>
+    <button onclick="hideData(this)" id="hideB2"><img class="imgB" src="assets/images/eye.png"></button>
+    <button onclick="showData()" id="dis1Thing"><img class="imgB" src="assets/images/styleLeft.png"></button>
+    <button onclick="displayData()" id="disAllThings"><img class="imgB" src="assets/images/styleLeft2.png"></button>
+</div> 
+
+</div>
+<div id="advancedData">
+    <p id="numbers"></p>
+    <p id="total"></p>
+</div>
 </div>
 <script src="assets/script/script.js"></script>
 </body>
