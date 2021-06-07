@@ -7,6 +7,7 @@
   padding: 0;
   border: 0;
   font-family: 'Cairo';
+  color: white;
 }
  /* *,
 *::after,
@@ -53,24 +54,28 @@ button{
   }
 }
 .data{
-  background-color: white;
+  background-color: #fb6f3e;
   border: black solid 1px;
   width: 300px;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 .data2{
-  background-color: white;
+  color: white;
   border: black solid 1px;
   width: 300px;
   text-align: center;
   border-radius: 10px;
+  background-color: #fb6f3e;
 }
 .address{
   padding: 3px;
+  padding-left: 5px;
 }
 .address2{
   padding: 3px;
   text-align: left;
+  padding-left: 5px;
 }
 #text{
   width: 20%;
@@ -79,6 +84,7 @@ button{
   font-size: 18px;
   margin-left: 40px;
   margin: 8px 0;
+  padding-left: 20px;
 }
 #widthData,#heightData{
   font-size: 20px;
@@ -86,20 +92,31 @@ button{
   border-radius: 15px;
   padding: 0 5px;
   background-color: #e0e0e0;
+  color: black;
+}
+#areaData{
+  font-size: 20px;
+  border: black solid 1px;
+  border-radius: 15px;
+  padding: 0 5px;
+  background-color: #e0e0e0;
+  color: black;
 }
 .imgB{
   width: 70px;
-  border: black solid 2px;
+  background-color: white;
+  border: black solid 2px; 
   border-radius: 10px;
   padding: 7px;
   margin: 3px;
+  outline: turquoise !important;
 }
 .imgB:hover{
   box-shadow: 3px 3px 3px rgba(0,0,0,0.12), 0 3px 3px rgba(0,0,0,0.24);
   transition: 0.3s;
 }
 button{
-  background-color: white;
+  background-color: transparent;
 }
 hr{
   border: #747474 solid 0.5px;
@@ -130,4 +147,33 @@ hr{
 #svg2{
   width: 80px;
   height: 81px;
+}
+#solids{
+  width: 40px;
+  height: 40px;
+}
+#backgroundColor{
+  width: 40px;
+  height: 40px;
+}
+.notSelected{
+  width: 40px;
+  height: 40px;
+}
+#containerOfShape,#buttonsChangeContainerOfShape{
+  display: inline-block;
+}
+#buttonsChangeContainerOfShape,#con{
+  display: inline-block;
+}
+#containerOfShape{
+  width: 25%;
+}
+#buttonsChangeContainerOfShape{
+  width: 40%;
+  position: absolute;
+  margin-left: 20px;
+}
+#con{
+  width: 64%;
 }

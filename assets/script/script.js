@@ -41,18 +41,18 @@ setInterval(function () {
     var heightShape =document.getElementById("heightData").innerHTML=parseFloat((elmnt.offsetHeight) * 0.0264583333).toFixed(0);
     var area= document.getElementById("areaData").innerHTML=parseFloat(widthShape * heightShape).toFixed(0);
   }, 200)
-  function hide(hide1){
+  function hide(a){
     num1 = num1+1;
-    // $(document).ready(function(){
-    //   $("#hideB").click(function(){
-    //     $(changedArea).hide();
-    //   });
-    // });
     document.getElementById("hideB").click=sj;
     var sj = document.getElementById("changedArea").style="display: none;";
-    document.getElementById("hideB").click(); 
+    document.getElementById("hideB").style.border = "blue solid 2px";
+    var x = document.getElementsByClassName("imge");
+    for (let i = 0; i < x.length; i++) {
+      x[i].style.border="0"
+    }
+    a.style.border="blue solid 2px"
   }
-  function axb(){
+  function axb(a){
     var elmnt = document.getElementById("cube");
     var widthShape =document.getElementById("widthData").innerHTML=parseFloat((elmnt.offsetWidth) * 0.0264583333).toFixed();
     var heightShape =document.getElementById("heightData").innerHTML=parseFloat((elmnt.offsetHeight) * 0.0264583333).toFixed(0);
@@ -60,10 +60,15 @@ setInterval(function () {
     document.getElementById("hideB").click=sj;
     var sj = document.getElementById("changedArea").style="display: block;";
     document.getElementById("changedArea").innerText=widthShape + " x " + heightShape
-    document.getElementById("hideB").click();
+    // document.getElementById("hideB").click();
+    var x = document.getElementsByClassName("imge");
+    for (let i = 0; i < x.length; i++) {
+      x[i].style.border="0"
+    }
+    a.style.border="blue solid 2px"
   num2 = num2+1
   }
-  function a(){
+  function a(a){
     var elmnt = document.getElementById("cube");
     var widthShape =document.getElementById("widthData").innerHTML=parseFloat((elmnt.offsetWidth) * 0.0264583333).toFixed(0);
     var heightShape =document.getElementById("heightData").innerHTML=parseFloat((elmnt.offsetHeight) * 0.0264583333).toFixed(0);
@@ -71,14 +76,22 @@ setInterval(function () {
     document.getElementById("hideB").click=sj;
     var sj = document.getElementById("changedArea").style="display: block;";
     document.getElementById("changedArea").innerText=area
-    document.getElementById("hideB").click();
+    var x = document.getElementsByClassName("imge");
+    for (let i = 0; i < x.length; i++) {
+      x[i].style.border="0"
+    }
+    a.style.border="blue solid 2px"
   }
-  function hideData(){
+  function hideData(a){
     document.getElementById("hideB").click=sj;
     var sj = document.getElementById("advancedData").style="display: none;";
-    document.getElementById("hideB").click(); 
+    var x = document.getElementsByClassName("imga");
+    for (let i = 0; i < x.length; i++) {
+      x[i].style.border="0"
+    }
+    a.style.border="blue solid 2px"
   }
-  function showData(){
+  function showData(a){
     var elmnt = document.getElementById("cube");
     var widthShape =document.getElementById("widthData").innerHTML=parseFloat((elmnt.offsetWidth) * 0.0264583333).toFixed(0);
     var heightShape =document.getElementById("heightData").innerHTML=parseFloat((elmnt.offsetHeight) * 0.0264583333).toFixed(0);
@@ -89,9 +102,13 @@ setInterval(function () {
     document.getElementById("numbers").innerText=widthShape + " x " + heightShape
     document.getElementById("total").innerText=area
     document.getElementById("total").style="color: grey;"
-    document.getElementById("dis1Thing").click();
+    var x = document.getElementsByClassName("imga");
+    for (let i = 0; i < x.length; i++) {
+      x[i].style.border="0"
+    }
+    a.style.border="blue solid 2px"
   }
-  function displayData(){
+  function displayData(a){
     $(document).ready(function(){
       $("#disAllThings").click(function(){
         $("#advancedData").show();
@@ -104,22 +121,31 @@ setInterval(function () {
     document.getElementById("numbers").innerText=widthShape + " x " + heightShape
     document.getElementById("total").innerText=area
     document.getElementById("total").style="color: black;"
+    var x = document.getElementsByClassName("imga");
+    for (let i = 0; i < x.length; i++) {
+      x[i].style.border="0"
+    }
+    a.style.border="blue solid 2px"
   }
-  function hideBack(){
+  function hideBack(a){
     num1 = num1+1;
     if ( num1 % 2 == 0   ) {
       document.getElementById("containerOfShape").style="background: none;"
+      a.src = "assets/images/selected.png";
     }
     else{
       document.getElementById("containerOfShape").style="background: assets/images/background.png"
+      a.src = "assets/images/notselected.png";
     }
 }
-function hideColor(){
+function hideColor(a){
   num2 = num2+1;
   if ( num2 % 2 == 0   ) {
     document.getElementById("cube").style="background: grey;"
+    a.src = "assets/images/selected.png";
   }
   else{
     document.getElementById("cube").style="background-color: #dfd877;"
+    a.src = "assets/images/notselected.png";
   }
 }
