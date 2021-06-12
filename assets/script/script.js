@@ -49,6 +49,11 @@ setInterval(function () {
     var heightShape =document.getElementById("heightData").innerHTML=parseFloat((elmnt.offsetHeight) * 0.0264583333).toFixed(0);
     var area= document.getElementById("areaData").innerHTML=parseFloat(widthShape * heightShape).toFixed(0);
   }, 300)
+  setInterval(function (){
+
+
+
+  }, 300)
   function hide(a){
     num1 = num1+1;
     document.getElementById("hideB").click=sj;
@@ -91,7 +96,9 @@ setInterval(function () {
     a.style.border="blue solid 2px"
   }
   function hideData(a){
-    document.getElementById("hideB").click=sj;
+    var los;
+    los = los +1;
+    document.getElementById("hideB2").click=sj;
     var sj = document.getElementById("advancedData").style="display: none;";
     var x = document.getElementsByClassName("imga");
     for (let i = 0; i < x.length; i++) {
@@ -148,6 +155,9 @@ setInterval(function () {
 }
  function hideColor(a){
    num2 = num2+1;
+   var elmnt = document.getElementById("cube");
+    var widthShapee =document.getElementById("widthData").innerHTML=parseFloat((elmnt.offsetWidth) * 0.0264583333).toFixed(0);
+    var heightShapee =document.getElementById("heightData").innerHTML=parseFloat((elmnt.offsetHeight) * 0.0264583333).toFixed(0);
    if ( num2 % 2 == 0   ) {
      document.getElementById("cube").style="background: grey;"
      a.src = "assets/images/selected.png";
