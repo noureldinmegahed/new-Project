@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <heda>
+        <link rel="stylesheet" href="assets/style/style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <script src="assets/script/jquery.js"></script>
+    </heda>
+    <body>
+    <div id="containerOfQuiz">
+        <div id="containerOfShape">
+            <div id="cube">
+                <div id="dragTool" draggable="true" ondrag="showCoords(event)" ondragend="dragendfun(event)">
+                <span id="dragtarget">
+                    <img id="circle" src="assets/images/circle.png">
+                </span>
+                </div>
+            </div>
+        </div>
+        <div id="containerOfQandA">
+            <div style="width: 380px;
+            text-align: left";>
+                <div class="questionDiv">
+                    <p class="question">Can you make the length 5 cm and width 7 cm?</p">
+                    <button class="submit" onclick="submitanswer1()">Submit</button>
+                </div>
+                <div class="questionDiv">
+                    <p class="question">Can you make the length 9 cm and width 4 cm?</p">
+                    <button class="submit" onclick="submitanswer2()">Submit</button>
+                </div>
+                <div>
+                    <p class="question">Can you make the length 7 cm and width 7 cm?</p">
+                    <button class="submit" onclick="submitanswer3()">Submit</button>
+                </div>
+            </div>
+        </div>
+    <div id="cono">
+        <div id="ScoreBox">
+            <div id="address">
+                <p id="addr">Quiz grades</p>
+            </div>
+        <div id="qaa">
+            <p>Your Rights Answers:<span id="rightScore"></span></p>
+            <p>Your Wrong Answers:<span id="wrongScore"></span></p>
+            <a href="index.html">Back To Learn</a>
+        </div>
+        </div>
+    </div>
+    </div>
+    <button id="end" onclick="check()">End Quiz</button>
+        <script src="assets/script/scriptOfQuiz.js"></script>
+    </body>
+</html>

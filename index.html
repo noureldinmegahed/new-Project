@@ -14,9 +14,11 @@
                 <img id="circle" src="assets/images/circle.png">
             </span>
             </div>
-            <div>
+        <div id="anyid">
+            <div id="changedAreaData">
                 <p id="changedArea"></p>
             </div>
+        </div>
         </div>
     </div>
     <div id="buttonsChangeContainerOfShape">
@@ -32,7 +34,7 @@
 <div id="containerOfData">
 <div class="data">
     <div class="address">
-        <p>Dimensions</p>
+        <p style="color:white">Dimensions</p>
     </div>
     <p class="txtData">Width = <span id="widthData"></span></p>
     <p class="txtData">Height = <span id="heightData"></span></p>
@@ -40,7 +42,7 @@
 
 <div class="data">
     <div class="address">
-        <p>Area</p>
+        <p style="color:white">Area</p>
     </div>
     <p class="txtData">Area = <span id="areaData"></span></p>
 </div>
@@ -49,22 +51,27 @@
     <div class="address2">
         <p>Parital Products</p>
     </div>
-    <button class="imge" id="hideB" onclick="hide(this)"><img class="imgB" id="ey1" src="assets/images/eye.png"></button>
-    <button class="imge" id="axB" onclick="axb(this)"><img class="imgB" id="axbimg" src="assets/images/axb.png"></button>
-    <button class="imge" id="A" onclick="a(this)"><img class="imgB" id="aimg" src="assets/images/a.png"></button>
+    <button class="imge" id="hideB" onclick="hide(this)"><img class="imgB" id="ey1" src="assets/images/eyeHover.png"></button>
+    <button class="imge" id="axB" onclick="axb(this)"><img class="imgB" id="axbimg" src="assets/images/axbHover.png"></button>
+    <button class="imge" id="A" onclick="a(this)"><img class="imgB" id="aimg" src="assets/images/aHover.png"></button>
     <hr>
     <div class="address2">
         <p>Area Model Calculation</p>
     </div>
-    <button class="imga" onclick="hideData(this)" id="hideB2"><img class="imgB" src="assets/images/eye.png"></button>
-    <button class="imga" onclick="showData(this)" id="dis1Thing"><img class="imgB" src="assets/images/styleLeft.png"></button>
-    <button class="imga" onclick="displayData(this)" id="disAllThings"><img class="imgB" src="assets/images/styleLeft2.png"></button>
+    <button class="imga" click="hideData(this)" id="hideB2"><img id="hideDeye" class="imgB" src="assets/images/eyeHover.png"></button>
+    <button class="imga" onclick="showData(this)" id="dis1Thing"><img id="left" class="imgB" src="assets/images/styleLeft.png"></button>
+    <button class="imga" onclick="displayData(this)" id="disAllThings"><img id="left2" class="imgB" src="assets/images/styleLeft2.png"></button>
 </div> 
 
 </div>
 <div id="advancedData">
     <p id="numbers"></p>
     <p id="total"></p>
+</div>
+<div>
+    <a href="quiz.html">
+        <button id="quizButton">Take a Quiz</button>
+    </a>
 </div>
 </div>
 <script src="assets/script/script.js"></script>

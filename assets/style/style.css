@@ -7,7 +7,6 @@
   padding: 0;
   border: 0;
   font-family: 'Cairo';
-  color: white;
 }
  /* *,
 *::after,
@@ -85,6 +84,7 @@ button{
   margin-left: 40px;
   margin: 8px 0;
   padding-left: 20px;
+  color: white;
 }
 #widthData,#heightData{
   font-size: 20px;
@@ -108,8 +108,13 @@ button{
   border: black solid 2px; 
   border-radius: 10px;
   padding: 7px;
-  margin: 3px;
+  margin: 2px;
   outline: turquoise !important;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-zoom: none;
 }
 .imgB:hover{
   box-shadow: 3px 3px 3px rgba(0,0,0,0.12), 0 3px 3px rgba(0,0,0,0.24);
@@ -133,6 +138,7 @@ hr{
   width: 378px;
   text-align: center;
   margin-top: 20px;
+  display: none;
 }
 #numbers{
   color: red;
@@ -151,29 +157,110 @@ hr{
 #solids{
   width: 40px;
   height: 40px;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-zoom: none;
 }
 #backgroundColor{
   width: 40px;
   height: 40px;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-zoom: none;
 }
 .notSelected{
   width: 40px;
   height: 40px;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-zoom: none;
 }
 #containerOfShape,#buttonsChangeContainerOfShape{
   display: inline-block;
 }
 #buttonsChangeContainerOfShape,#con{
   display: inline-block;
-}
-#containerOfShape{
-  width: 25%;
+  text-align: right;
 }
 #buttonsChangeContainerOfShape{
   width: 40%;
   position: absolute;
-  margin-left: 20px;
+  margin-right: 40px;
+  margin-top: 20px;
 }
-#con{
-  width: 64%;
+#containerOfData{
+  margin-right: 170px;
+}
+#changedAreaData{
+  background-color: white;
+  border: black solid 1px;
+  border-radius: 10px;
+  text-align: center;
+  width: 50px;
+  position: relative;
+  display: none;
+}
+/* Quiz Page */
+#containerOfQandA{
+  text-align: right;
+  border: black solid 1px;
+  float: right;
+  border-radius: 10px;
+  background-color: coral;
+  color: white;
+}
+.question{
+  font-weight: 500;
+  padding-left: 10px;
+}
+.submit{
+  display: block;
+  border: black solid 1.5px;
+  border-radius: 5px;
+  padding: 3px;
+  margin-left: 15px;
+  color: white;
+}
+.questionDiv{
+  border-bottom: black solid 1px;
+  padding-bottom: 5px;
+}
+#quizButton{
+  position: absolute;
+  left: 400px;
+  top: 350px;
+  border: black solid 1px;
+  padding: 3px;
+  border-radius: 5px;
+}
+/* Score Page */
+#ScoreBox{
+  border: black solid 1px;
+  text-align: left;
+  background-color: white;
+  border-radius: 5px;
+  display: none;
+}
+#cono{
+  padding: 0px 450px;
+  position: relative;
+  bottom: 115px;
+}
+#addr{
+  text-align: center;
+  border-bottom: black solid 0.5px;
+}
+#qaa{
+  padding-left: 20px;
+}
+#end{
+  border: black solid 1px;
+  padding: 3px;
+  border-radius: 5px;
 }
