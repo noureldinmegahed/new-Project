@@ -150,7 +150,7 @@ setInterval(function () {
     }
     else{
       document.getElementById("containerOfShape").style="background: assets/images/background.png"
-      a.src = "assets/images/notselected.png";
+      a.src = "assets/images/notSelected.png";
     }
 }
  function hideColor(a){
@@ -164,7 +164,7 @@ setInterval(function () {
    }
    else{
      document.getElementById("cube").style="background-color: #dfd877;"
-     a.src = "assets/images/notselected.png";
+     a.src = "assets/images/notSelected.png";
    }
  }
 // function changeEyeColor(event) {
