@@ -46,6 +46,8 @@ function showCoords(event) {
           alert("Success")
           score = score +1;
           console.log(score)
+          var q1 =document.getElementById("q1");
+          q1.parentNode.removeChild( q1 );
         }else{
           alert("No")
           wrongs = wrongs +1
@@ -58,6 +60,8 @@ function showCoords(event) {
           alert("Success")
           score = score +1;
           console.log(score)
+          var q2 =document.getElementById("q2");
+          q2.parentNode.removeChild( q2 );
         }else{
           alert("No")
           wrongs = wrongs +1
@@ -70,13 +74,12 @@ function showCoords(event) {
           alert("Success")
           score = score +1;
           console.log(score)
+          var q3 =document.getElementById("q3");
+          q3.parentNode.removeChild( q3 );
         }else{
           alert("No")
           wrongs = wrongs +1
         }
-      }
-      if (score == 3) {
-        alert("دماغ شغالة مش بتنام")
       }
       function check() {
         var txt;
@@ -89,4 +92,20 @@ function showCoords(event) {
           txt = "You pressed Cancel!";
         }
         
+     }
+     function skipanswer3() {
+      if (confirm("Are You Sure Skip This Question You can't go back to the question")) {
+        var q3 =document.getElementById("q3");
+        q3.parentNode.removeChild( q3 );
+      } else {
+        txt = "You pressed Cancel!";
+      }
+     }
+     function skipanswer2() {
+      if (confirm("Are You Sure Skip This Question You can't go back to the question")) {
+        var q2 =document.getElementById("q2");
+        q2.parentNode.removeChild( q2 );
+      } else {
+        txt = "You pressed Cancel!";
+      }
      }

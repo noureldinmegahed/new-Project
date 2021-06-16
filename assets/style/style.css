@@ -146,6 +146,9 @@ hr{
 #changedArea{
   color: black;
 }
+#changedArea2{
+  color: black;
+}
 #svg1{
   width: 30px;
   height: 30px;
@@ -206,14 +209,18 @@ hr{
   position: relative;
   display: none;
 }
+#changedAreaData2{
+  background-color: white;
+  border: black solid 1px;
+  border-radius: 10px;
+  text-align: center;
+  width: 50px;
+  position: relative;
+  display: none;
+}
 /* Quiz Page */
 #containerOfQandA{
-  text-align: right;
-  border: black solid 1px;
   float: right;
-  border-radius: 10px;
-  background-color: coral;
-  color: white;
 }
 .question{
   font-weight: 500;
@@ -226,10 +233,24 @@ hr{
   padding: 3px;
   margin-left: 15px;
   color: white;
+  display: inline-block;
+}
+.skip{
+  display: block;
+  border: black solid 1.5px;
+  border-radius: 5px;
+  padding: 3px;
+  margin-left: 5px;
+  color: white;
+  display: inline-block;
 }
 .questionDiv{
-  border-bottom: black solid 1px;
   padding-bottom: 5px;
+  text-align: left;
+  border: black solid 1px;
+  border-radius: 10px;
+  background-color: coral;
+  color: white;
 }
 #quizButton{
   position: absolute;
@@ -270,4 +291,20 @@ hr{
   border: black solid 1px;
   padding: 0 3px;
   text-decoration: none;
+}
+#changedAreaData{
+  position: relative;
+}
+
+#changedAreaData, #changedAreaData2{
+  position: absolute;
+}
+#q1{
+  position: relative;
+}
+#q1, #q2{
+  position: absolute;
+}
+#q2, #q3{
+  position: absolute;
 }

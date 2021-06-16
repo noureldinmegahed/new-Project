@@ -20,7 +20,17 @@ function showCoords(event) {
     document.getElementById("anyid").style.paddingTop= ye;
   
   var coords = "X coords: " + x + ", Y coords: " + y;
+  var elmnt = document.getElementById("cube");
+  var widthShape =document.getElementById("widthData").innerHTML=parseFloat((elmnt.offsetWidth) * 0.0264583333).toFixed(0);
+  var heightShape =document.getElementById("heightData").innerHTML=parseFloat((elmnt.offsetHeight) * 0.0264583333).toFixed(0);
+  var area= document.getElementById("areaData").innerHTML=parseFloat(widthShape * heightShape).toFixed(0);
+  document.getElementById("changedArea").innerText=area
+  document.getElementById("changedArea2").innerText=widthShape + " x " + heightShape
+  document.getElementById("numbers").innerHTML=widthShape + " x " + heightShape
+  document.getElementById("total").innerHTML=area
 }
+
+
 function dragendfun(event){
     var x = (event.clientX/37.7952755906).toFixed(0);
     var y = (event.clientY/37.7952755906).toFixed(0);
@@ -38,8 +48,19 @@ function dragendfun(event){
     var ye = (event.clientY/2.6).toFixed(0);
     console.log(x)
     document.getElementById("anyid").style.paddingLeft= xe;
-    document.getElementById("anyid").style.paddingTop= ye; 
+    document.getElementById("anyid").style.paddingTop= ye;
+
+  var elmnt = document.getElementById("cube");
+  var widthShape =document.getElementById("widthData").innerHTML=parseFloat((elmnt.offsetWidth) * 0.0264583333).toFixed(0);
+  var heightShape =document.getElementById("heightData").innerHTML=parseFloat((elmnt.offsetHeight) * 0.0264583333).toFixed(0);
+  var area= document.getElementById("areaData").innerHTML=parseFloat(widthShape * heightShape).toFixed(0);
+  document.getElementById("changedArea").innerText=area
+  document.getElementById("changedArea2").innerText=widthShape + " x " + heightShape
+  document.getElementById("numbers").innerHTML=widthShape + " x " + heightShape
+  document.getElementById("total").innerHTML=area
   }
+
+
 var box = document.querySelector('#cube');
 setInterval(function () {
     var elmnt = document.getElementById("cube");
@@ -49,15 +70,13 @@ setInterval(function () {
     var heightShape =document.getElementById("heightData").innerHTML=parseFloat((elmnt.offsetHeight) * 0.0264583333).toFixed(0);
     var area= document.getElementById("areaData").innerHTML=parseFloat(widthShape * heightShape).toFixed(0);
   }, 300)
-  setInterval(function (){
 
 
-
-  }, 300)
   function hide(a){
     num1 = num1+1;
     document.getElementById("hideB").click=sj;
     var sj = document.getElementById("changedAreaData").style="display: none;";
+    var sj = document.getElementById("changedAreaData2").style="display: none;";
     document.getElementById("hideB").style.border = "blue solid 2px";
     var x = document.getElementsByClassName("imge");
     for (let i = 0; i < x.length; i++) {
@@ -65,14 +84,12 @@ setInterval(function () {
     }
     a.style.border="blue solid 2px"
   }
+
+
   function axb(a){
-    var elmnt = document.getElementById("cube");
-    var widthShape =document.getElementById("widthData").innerHTML=parseFloat((elmnt.offsetWidth) * 0.0264583333).toFixed();
-    var heightShape =document.getElementById("heightData").innerHTML=parseFloat((elmnt.offsetHeight) * 0.0264583333).toFixed(0);
-    var area= document.getElementById("areaData").innerHTML=parseFloat(widthShape * heightShape).toFixed(0);
     document.getElementById("hideB").click=sj;
-    var sj = document.getElementById("changedAreaData").style="display: block;";
-    document.getElementById("changedArea").innerText=widthShape + " x " + heightShape
+    document.getElementById("changedAreaData").style="display: none;"
+    var sj = document.getElementById("changedAreaData2").style="display: block;"
     // document.getElementById("hideB").click();
     var x = document.getElementsByClassName("imge");
     for (let i = 0; i < x.length; i++) {
@@ -81,14 +98,12 @@ setInterval(function () {
     a.style.border="blue solid 2px"
   num2 = num2+1
   }
+
+
   function a(a){
-    var elmnt = document.getElementById("cube");
-    var widthShape =document.getElementById("widthData").innerHTML=parseFloat((elmnt.offsetWidth) * 0.0264583333).toFixed(0);
-    var heightShape =document.getElementById("heightData").innerHTML=parseFloat((elmnt.offsetHeight) * 0.0264583333).toFixed(0);
-    var area= document.getElementById("areaData").innerHTML=parseFloat(widthShape * heightShape).toFixed(0);
     document.getElementById("hideB").click=sj;
-    var sj = document.getElementById("changedAreaData").style="display: block;";
-    document.getElementById("changedArea").innerText=area
+    document.getElementById("changedAreaData2").style="display: none;"
+    var sj = document.getElementById("changedAreaData").style="display: block;"
     var x = document.getElementsByClassName("imge");
     for (let i = 0; i < x.length; i++) {
       x[i].style.border="0"
@@ -106,6 +121,15 @@ setInterval(function () {
     }
     a.style.border="blue solid 2px"
   }
+  setInterval(function(){
+    var elmnt = document.getElementById("cube");
+    var widthShape =document.getElementById("widthData").innerHTML=parseFloat((elmnt.offsetWidth) * 0.0264583333).toFixed(0);
+    var heightShape =document.getElementById("heightData").innerHTML=parseFloat((elmnt.offsetHeight) * 0.0264583333).toFixed(0);
+    var area= document.getElementById("areaData").innerHTML=parseFloat(widthShape * heightShape).toFixed(0);
+    document.getElementById("numbers").innerHTML=widthShape + " x " + heightShape
+    document.getElementById("total").innerHTML=area
+  },300)
+
   function showData(a){
     var elmnt = document.getElementById("cube");
     var widthShape =document.getElementById("widthData").innerHTML=parseFloat((elmnt.offsetWidth) * 0.0264583333).toFixed(0);
@@ -114,8 +138,6 @@ setInterval(function () {
     
     document.getElementById("dis1Thing").click=sj;
     var sj = document.getElementById("advancedData").style="display: block;";
-    document.getElementById("numbers").innerText=widthShape + " x " + heightShape
-    document.getElementById("total").innerText=area
     document.getElementById("total").style="color: grey;"
     var x = document.getElementsByClassName("imga");
     for (let i = 0; i < x.length; i++) {
@@ -123,18 +145,15 @@ setInterval(function () {
     }
     a.style.border="blue solid 2px"
   }
+
+
   function displayData(a){
-    $(document).ready(function(){
-      $("#disAllThings").click(function(){
-        $("#advancedData").show();
-      });
-    });
+    document.getElementById("dis1Thing").click=sj;
+    var sj = document.getElementById("advancedData").style="display: block;";
     var elmnt = document.getElementById("cube");
     var widthShape =document.getElementById("widthData").innerHTML=parseFloat((elmnt.offsetWidth) * 0.0264583333).toFixed(0);
     var heightShape =document.getElementById("heightData").innerHTML=parseFloat((elmnt.offsetHeight) * 0.0264583333).toFixed(0);
     var area= document.getElementById("areaData").innerHTML=parseFloat(widthShape * heightShape).toFixed(0);
-    document.getElementById("numbers").innerText=widthShape + " x " + heightShape
-    document.getElementById("total").innerText=area
     document.getElementById("total").style="color: black;"
     var x = document.getElementsByClassName("imga");
     for (let i = 0; i < x.length; i++) {
@@ -142,6 +161,8 @@ setInterval(function () {
     }
     a.style.border="blue solid 2px"
   }
+
+
   function hideBack(a){
     num1 = num1+1;
     if ( num1 % 2 == 0   ) {
@@ -153,6 +174,8 @@ setInterval(function () {
       a.src = "assets/images/notSelected.png";
     }
 }
+
+
  function hideColor(a){
    num2 = num2+1;
    var elmnt = document.getElementById("cube");
@@ -167,6 +190,7 @@ setInterval(function () {
      a.src = "assets/images/notSelected.png";
    }
  }
+
 // function changeEyeColor(event) {
 //   document.getElementById("hideDeye").src = "assets/images/eyeHover.png";
 // }
