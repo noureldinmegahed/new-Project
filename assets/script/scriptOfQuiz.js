@@ -2,6 +2,7 @@ var score = 0;
 var wrongs = 0;
 function showCoords(event) {
     var x = (event.clientX/37.7952755906).toFixed(0);
+    var y = (event.clientY/37.7952755906).toFixed(0);
     var numX = document.getElementById("cube").style.width = x +"cm";
     var numY = document.getElementById("cube").style.height = y +"cm";
     if(x>10){
