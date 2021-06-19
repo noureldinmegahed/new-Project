@@ -40,9 +40,11 @@ function showCoords(event) {
     //   var area= document.getElementById("areaData").innerHTML=parseFloat(widthShape * heightShape).toFixed(0);
 
     function submitanswer1() {
-        console.log(elmnt.offsetHeight)
-        console.log(elmnt.offsetWidth)
-        if (elmnt.offsetWidth== "265" && elmnt.offsetHeight == "189") {
+        var x = (elmnt.offsetHeight/37.7952755906).toFixed(0);
+        var y = (elmnt.offsetWidth/37.7952755906).toFixed(0);
+        var numX = document.getElementById("cube").style.width = x +"cm";
+        var numY =document.getElementById("cube").style.height = y +"cm";
+        if (numX== "5cm" && numY == "7cm") {
           alert("Success")
           score = score +1;
           console.log(score)
@@ -52,11 +54,14 @@ function showCoords(event) {
           alert("No")
           wrongs = wrongs +1
         }
+
       }
       function submitanswer2() {
-        console.log(elmnt.offsetHeight)
-        console.log(elmnt.offsetWidth)
-        if (elmnt.offsetWidth== "151" && elmnt.offsetHeight == "340") {
+        var x = (elmnt.offsetHeight/37.7952755906).toFixed(0);
+        var y = (elmnt.offsetWidth/37.7952755906).toFixed(0);
+        var numX = document.getElementById("cube").style.width = x +"cm";
+        var numY =document.getElementById("cube").style.height = y +"cm";
+        if (numX== "9cm" && numY == "4cm") {
           alert("Success")
           score = score +1;
           console.log(score)
@@ -66,11 +71,14 @@ function showCoords(event) {
           alert("No")
           wrongs = wrongs +1
         }
+
       }
       function submitanswer3() {
-        console.log(elmnt.offsetHeight)
-        console.log(elmnt.offsetWidth)
-        if (elmnt.offsetWidth== "265" && elmnt.offsetHeight == "265") {
+      var x = (elmnt.offsetHeight/37.7952755906).toFixed(0);
+      var y = (elmnt.offsetWidth/37.7952755906).toFixed(0);
+      var numX = document.getElementById("cube").style.width = x +"cm";
+      var numY =document.getElementById("cube").style.height = y +"cm";
+        if (numX== "7cm" && numY == "7cm") {
           alert("Success")
           score = score +1;
           console.log(score)
@@ -80,6 +88,7 @@ function showCoords(event) {
           alert("No")
           wrongs = wrongs +1
         }
+        console.log("This is q3 " )
       }
       function check() {
         var txt;
