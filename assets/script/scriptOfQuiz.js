@@ -2,7 +2,6 @@ var score = 0;
 var wrongs = 0;
 function showCoords(event) {
     var x = (event.clientX/37.7952755906).toFixed(0);
-      var y = (event.clientY/37.7952755906).toFixed(0);
     var numX = document.getElementById("cube").style.width = x +"cm";
     var numY = document.getElementById("cube").style.height = y +"cm";
     if(x>10){
@@ -13,9 +12,7 @@ function showCoords(event) {
       document.getElementById("cube").style.width = "10cm";
       document.getElementById("cube").style.height = "10cm";
     }
-    
-    var coords = "X coords: " + x + ", Y coords: " + y;
-  }
+    }
   function dragendfun(event){
       var x = (event.clientX/37.7952755906).toFixed(0);
       var y = (event.clientY/37.7952755906).toFixed(0);
@@ -33,12 +30,6 @@ function showCoords(event) {
     }
       
     var elmnt = document.getElementById("cube");
-    //   var txt = "Height with padding and border: " + elmnt.offsetHeight + "px<br>";
-    //   txt += "Width with padding and border: " + elmnt.offsetWidth + "px";
-    //   var widthShape =document.getElementById("widthData").innerHTML=parseFloat((elmnt.offsetWidth) * 0.0264583333).toFixed(0);
-    //   var heightShape =document.getElementById("heightData").innerHTML=parseFloat((elmnt.offsetHeight) * 0.0264583333).toFixed(0);
-    //   var area= document.getElementById("areaData").innerHTML=parseFloat(widthShape * heightShape).toFixed(0);
-
     function submitanswer1() {
         var x = (elmnt.offsetHeight/37.7952755906).toFixed(0);
         var y = (elmnt.offsetWidth/37.7952755906).toFixed(0);
@@ -88,7 +79,6 @@ function showCoords(event) {
           alert("No")
           wrongs = wrongs +1
         }
-        console.log("This is q3 " )
       }
       function check() {
         var txt;
